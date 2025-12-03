@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patil NGO - Login Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo-area">
+                <span class="emblem">🤝</span> 
+                <div class="title-block">
+                    <h1>Patil NGO: Volunteer & Impact Tracking System</h1>
+                    <p>Committed to Sustainable Community Development</p>
+                </div>
+            </div>
+            <div class="utility-info">
+                <p>Govt. of Maharashtra</p>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Impact Summary</a></li>
+            <li><a href="#">Volunteer FAQ</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li class="utility-link"><a href="#">Helpline No. - +91 98765 43210</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-container">
+        <div class="portal-grid">
+            
+            <div class="instructions-panel">
+                <h3 class="instruction-heading">📢 Important Instructions for Volunteers & Partners</h3>
+                <ul>
+                    <li>**Pre-registration:** All new volunteers must complete the initial application via the **Register New Volunteer/Partner** link below to receive a unique **Volunteer ID**.</li>
+                    <li>**Quarterly Reporting:** Project partners must submit a **quarterly impact report** by the 10th of the following month using their Partner Login ID.</li>
+                    <li>**Profile Updates:** For any updates to your registered profile (contact, address, skills), please first update the information in the **Patil NGO Partner Registry**.</li>
+                    <li>**Note:** For any query regarding donations or financial matters, kindly email <a href="mailto:support@patilngo.org">support@patilngo.org</a> for prompt assistance.</li>
+                </ul>
+            </div>
+
+            <div class="login-panel">
+                <div class="login-box">
+                    <h4 class="login-heading">✅ Partner / Volunteer Login</h4>
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="login-id">Your Login ID</label>
+                            <input type="text" id="login-id" name="login-id" placeholder="Enter Volunteer or Partner ID" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Your password</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        <div class="form-group captcha-group">
+                            <div class="captcha-image">
+                                <span class="captcha-text">Patil2F</span>
+                            </div>
+                            <input type="text" id="captcha-text" name="captcha-text" placeholder="Captcha Text" required>
+                        </div>
+                        <button type="submit" class="login-button">LOGIN</button>
+                    </form>
+                    <div class="login-links">
+                        <a href="register.html" class="register-link">Register New Volunteer/Partner</a>
+                        <span>|</span>
+                        <a href="#" class="forgot-link">Forgot Password?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>Content is managed by Patil NGO, Government of Maharashtra. Designed and maintained by National Informatics Centre.</p>
+    </footer>
+
+</body>
+</html>

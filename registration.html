@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patil NGO - Registration Portal</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo-area">
+                <span class="emblem">🤝</span> 
+                <div class="title-block">
+                    <h1>Patil NGO: Volunteer & Impact Tracking System</h1>
+                    <p>Committed to Sustainable Community Development</p>
+                </div>
+            </div>
+            <div class="utility-info">
+                <p>Govt. of Maharashtra</p>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Impact Areas</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li class="utility-link"><a href="#">Helpline No. - +91 98765 43210</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-container registration-page">
+        <div class="registration-panel">
+            <h4 class="registration-heading">📝 New Volunteer/Partner Registration</h4>
+            <p class="form-instruction">Please fill out all mandatory fields marked with an asterisk (*).</p>
+            
+            <form id="registration-form" action="#">
+                <fieldset>
+                    <legend>Personal & Contact Information</legend>
+                    <div class="form-row">
+                        <div class="form-group required">
+                            <label for="full-name">Full Name *</label>
+                            <input type="text" id="full-name" required>
+                        </div>
+                        <div class="form-group required">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group required">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                        <div class="form-group required">
+                            <label for="aadhaar">Aadhaar/ID Proof No. *</label>
+                            <input type="text" id="aadhaar" required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Profile Details</legend>
+                    <div class="form-row">
+                        <div class="form-group required">
+                            <label for="type">Registration Type *</label>
+                            <select id="type" required>
+                                <option value="">Select Type</option>
+                                <option value="volunteer">Individual Volunteer</option>
+                                <option value="partner">Organizational Partner</option>
+                            </select>
+                        </div>
+                        <div class="form-group required">
+                            <label for="area">Primary Area of Interest *</label>
+                            <select id="area" required>
+                                <option value="">Select Area</option>
+                                <option value="education">Education</option>
+                                <option value="healthcare">Healthcare</option>
+                                <option value="environment">Environment</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="skills">Relevant Skills (e.g., Teaching, Marketing, Medical)</label>
+                        <textarea id="skills" rows="3"></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Create Login Credentials</legend>
+                    <div class="form-row">
+                        <div class="form-group required">
+                            <label for="new-password">Create Password *</label>
+                            <input type="password" id="new-password" required>
+                        </div>
+                        <div class="form-group required">
+                            <label for="confirm-password">Confirm Password *</label>
+                            <input type="password" id="confirm-password" required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I agree to the terms and conditions of Patil NGO. *</label>
+                </div>
+                
+                <button type="submit" class="register-submit-button">SUBMIT APPLICATION & REGISTER</button>
+            </form>
+            
+            <div class="back-to-login">
+                <a href="index.html">← Back to Login Portal</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <p>Content is managed by Patil NGO, Government of Maharashtra. Designed and maintained by National Informatics Centre.</p>
+    </footer>
+
+    <script>
+        function generateUniqueID(prefix) {
+            // Generates a random 6-digit number
+            const randomNumber = Math.floor(100000 + Math.random() * 900000); 
+            // Gets the current year (e.g., 2025)
+            const year = new Date().getFullYear();
+            
+            // Format: NGO-PREFIX-YEAR-RANDOM
+            return `PNG-${prefix.toUpperCase()}-${year}-${randomNumber}`;
+        }
+
+        document.getElementById('registration-form').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            
+            const password = document.getElementById('new-password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            const regType = document.getElementById('type').value;
+
+            if (password !== confirmPassword) {
+                alert('Error: Passwords do not match. Please try again.');
+                return;
+            }
+
+            // Determine prefix based on registration type
+            const idPrefix = regType === 'volunteer' ? 'VOL' : 'PRT'; 
+            
+            // Generate the unique ID
+            const uniqueID = generateUniqueID(idPrefix);
+
+            // Display the success message and the unique ID in a dialogue box
+            alert(
+                'Registration Successful! 🎉\n\n' +
+                'Your application is being processed. Please note down your unique Login ID below:\n\n' +
+                '----------------------------------------------\n' +
+                `Login ID: ${uniqueID}\n` +
+                '----------------------------------------------\n\n' +
+                'You will now be redirected to the login page.'
+            );
+            
+            // Redirect to the login page
+            window.location.href = 'index.html'; 
+        });
+    </script>
+
+</body>
+</html>

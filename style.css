@@ -1,0 +1,408 @@
+/* --- Base Reset and Global Styles --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light gray background */
+    line-height: 1.6;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+/* --- Header & Title Bar Styling --- */
+.main-header {
+    background-color: #ffffff;
+    border-bottom: 2px solid #0056b3;
+    padding: 15px 0;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+}
+
+.emblem {
+    font-size: 30px;
+    margin-right: 15px;
+    color: #0056b3;
+    font-weight: bold;
+}
+
+.title-block h1 {
+    font-size: 20px;
+    color: #0056b3;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.title-block p {
+    font-size: 14px;
+    color: #666;
+}
+
+.utility-info p {
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* --- Navigation Bar Styling --- */
+.main-nav {
+    background-color: #0056b3;
+    color: white;
+}
+
+.main-nav ul {
+    max-width: 1200px;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    padding: 0 20px;
+}
+
+.main-nav ul li a {
+    display: block;
+    padding: 12px 18px;
+    color: white;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.main-nav ul li a:hover {
+    background-color: #004080;
+}
+
+.utility-link {
+    margin-left: auto;
+}
+
+/* --- Global Form Styles (Used by both pages) --- */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+
+/* ------------------------------------------------ */
+/* --- LOGIN PAGE SPECIFIC STYLES (index.html) --- */
+/* ------------------------------------------------ */
+
+.main-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.portal-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr; /* Two columns: Instructions and Login */
+    gap: 30px;
+}
+
+/* Instructions Panel Styling */
+.instructions-panel {
+    background-color: #fff8e1; 
+    border-left: 5px solid #ffc107; 
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.instruction-heading {
+    color: #c90000; 
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.instructions-panel ul {
+    list-style: disc inside;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.instructions-panel ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* Login Panel Styling */
+.login-panel {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-box {
+    padding: 25px;
+}
+
+.login-heading {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 25px;
+    margin: -25px -25px 20px -25px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.captcha-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.captcha-image {
+    width: 120px;
+    height: 35px;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #999;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 18px;
+    color: #444;
+    user-select: none;
+}
+
+.captcha-group input {
+    flex-grow: 1;
+}
+
+.login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #218838;
+}
+
+.login-links {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+.login-links span {
+    color: #999;
+    margin: 0 5px;
+}
+
+
+/* ---------------------------------------------------- */
+/* --- REGISTRATION PAGE SPECIFIC STYLES (register.html) --- */
+/* ---------------------------------------------------- */
+
+.registration-page {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 30px;
+}
+
+.registration-panel {
+    background-color: #fff;
+    width: 100%;
+    max-width: 800px;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.registration-heading {
+    background-color: #0056b3; /* Primary Blue for Registration header */
+    color: white;
+    padding: 15px 30px;
+    margin: -30px -30px 25px -30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 6px 6px 0 0;
+}
+
+.form-instruction {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 15px;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 4px;
+}
+
+legend {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0056b3;
+    padding: 0 10px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.form-group.required label::after {
+    content: " *";
+    color: #c90000;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.register-submit-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #0056b3; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.register-submit-button:hover {
+    background-color: #004080;
+}
+
+.back-to-login {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* --- Footer Styling --- */
+.main-footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 12px;
+    margin-top: 30px;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 900px) {
+    /* Login Page: Stack instructions and login panels */
+    .portal-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Navigation: Stack items */
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .main-nav ul li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #004080;
+    }
+    
+    .utility-link {
+        margin-left: 0;
+        border-bottom: none;
+    }
+
+    /* Header: Stack title and utility info */
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo-area {
+        margin-bottom: 10px;
+    }
+
+    /* Registration Page: Stack form rows */
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adjust padding and font sizes for small screens */
+    .header-content, .main-nav ul, .main-container {
+        padding: 0 10px;
+    }
+
+    .captcha-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .captcha-image {
+        width: 100%;
+    }
+}
